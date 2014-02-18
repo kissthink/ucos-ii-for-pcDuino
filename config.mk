@@ -20,6 +20,5 @@ CFLAGS = -Wall -g -I$(TOPDIR)/ -I$(TOPDIR)/ucos/ -I$(TOPDIR)/ucos/port/
 LDFLAGS = -lpthread -larduino -L./arduino
 
 $(BUILDDIR)/%.o : %.c
-	@make -C ../arduino
 	@$(CC) $(CFLAGS) $(INCS) -c -o   $@ $^
 	@echo "  [CC] $@"
